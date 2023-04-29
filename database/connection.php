@@ -2,10 +2,11 @@
 
 
 // Database env
-$hostname = "localhost";
-$username = "root";
-$database = "scandiweb";
-$password = "";
 
-include 'QueryBuilder.php';
+$GLOBALS["hostname"] = "localhost";
+$GLOBALS["username"] = "root";
+$GLOBALS["database"] = "scandiweb";
+$GLOBALS["password"] = "";
+
+include "QueryBuilder.php";
 include 'DB.php';

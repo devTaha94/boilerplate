@@ -14,8 +14,9 @@ class Book extends Product
             'sku' => $this->sku,
             'name' => $this->name,
             'price' => $this->price,
+            'unit' => $this->unit,
             'option_unit' => $this->measurement,
-            'option_value' => $this->options[0]['value']
+            'option_value' => $this->options[0]['value'] . ' ' . $this->unit // This can be customized anyway
         ];
     }
 }

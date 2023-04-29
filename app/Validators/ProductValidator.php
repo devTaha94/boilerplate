@@ -3,6 +3,7 @@
 namespace App\Validators;
 
 use Exception;
+use DB;
 
 class ProductValidator
 {
@@ -24,8 +25,8 @@ class ProductValidator
      */
     public static function validateSku($sku): bool
     {
-        // Todo:- Check is unique in db.
-        return !empty($sku);
+        $exists = DB::query("SELECT * FROM products WHERE sku = '".$sku."' LIMIT 1")->get();
+        return !empty($sku) && count($exists) == 0;
     }
 
     /**

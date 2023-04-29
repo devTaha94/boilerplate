@@ -15,7 +15,7 @@ class Furniture extends Product
             'name' => $this->name,
             'price' => $this->price,
             'option_unit' => 'Dimensions',
-            'option_value' => $this->mapOptions($this->options)
+            'option_value' => $this->mapOptions($this->options) // This can be customized anyway
         ];
     }
 

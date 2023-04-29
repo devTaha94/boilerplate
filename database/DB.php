@@ -6,24 +6,11 @@ class DB
 
     /**
      * Initialize the QueryBuilder instance
-     *
-     * @param string $host
-     * @param string $username
-     * @param string $password
-     * @param string $dbname
-     * @param string $charset
-     *
      * @return QueryBuilder
      */
-    public static function initialize(
-        string $host = 'localhost',
-        string $username = 'root',
-        string $password = '',
-        string $dbname = 'scandiweb',
-        string $charset = 'utf8'
-    ): QueryBuilder {
+    public static function initialize(): QueryBuilder {
         if (!self::$queryBuilder) {
-            self::$queryBuilder = new QueryBuilder($host, $username, $password, $dbname, $charset);
+            self::$queryBuilder = new QueryBuilder($GLOBALS["hostname"], $GLOBALS["username"], $GLOBALS["password"], $GLOBALS["database"]);
         }
 
         return self::$queryBuilder;

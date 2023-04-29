@@ -1,5 +1,6 @@
 <?php
 
+// Manually autoload files, Like Composer
 spl_autoload_register(function ($class) {
     $class = str_replace('\\', '/', $class);
     $file = dirname(__DIR__) .'/'. $class . '.php';

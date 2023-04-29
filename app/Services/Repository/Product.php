@@ -13,6 +13,7 @@ abstract class Product implements ProductInterface
     protected string $sku;
     protected string $name;
     protected string $type;
+    protected string $unit;
     protected string $measurement;
     protected float $price;
     protected array $options;
@@ -51,6 +52,15 @@ abstract class Product implements ProductInterface
     public function setName(string $name): void
     {
         $this->name = $name;
+    }
+
+    /**
+     * @param string $unit
+     * @return void
+     */
+    public function setUnit(string $unit): void
+    {
+        $this->unit = $unit;
     }
 
     /**
@@ -172,6 +182,9 @@ abstract class Product implements ProductInterface
         }
     }
 
+    /**
+     * @return array
+     */
     public static function getAll(): array
     {
         return DB::query("SELECT p.id, p.sku, p.name, p.price, p.type, pt.measurement, pt.unit FROM " . self::$table . " p LEFT JOIN product_types pt ON p.product_type_id = pt.id;")->get();

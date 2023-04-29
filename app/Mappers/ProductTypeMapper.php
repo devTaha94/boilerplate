@@ -12,8 +12,9 @@ class ProductTypeMapper extends Mapper {
     {
         return [
             'id' => $item['id'],
-            'alias' => $item['alias'],
             'name' => ucfirst($item['alias']),
+            'alias' => $item['alias'],
+            'unit' => $item['unit'],
             'description' => $item['description'],
         ];
     }

@@ -13,9 +13,10 @@ class Dvd extends Product
             'id' => $this->id,
             'sku' => $this->sku,
             'name' => $this->name,
+            'unit' => $this->unit,
             'price' => $this->price,
             'option_unit' => $this->measurement,
-            'option_value' => $this->options[0]['value']
+            'option_value' => $this->options[0]['value'] . ' ' . $this->unit // This can be customized anyway
         ];
     }
 }

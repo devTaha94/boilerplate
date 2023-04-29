@@ -18,9 +18,10 @@ class ProductController extends Controller
             $product = new $class;
             $product->setId($item['id']);
             $product->setSku($item['sku']);
+            $product->setUnit($item['unit']);
             $product->setName($item['name']);
-            $product->setMeasurement($item['measurement']);
             $product->setPrice($item['price']);
+            $product->setMeasurement($item['measurement']);
             $product->setOptions($product->fetchOptions($item['id']));
             $results[] = $product->display();
         }

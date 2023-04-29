@@ -8,25 +8,13 @@ class QueryBuilder {
     protected bool $query_closed = TRUE;
     public int $query_count = 0;
 
-    /**
-     * @param string $host
-     * @param string $username
-     * @param string $password
-     * @param string $dbname
-     * @param string $charset
-     */
-    public function __construct(
-        string $host = 'localhost',
-        string $username = 'root',
-        string $password = '',
-        string $dbname = 'scandiweb',
-        string $charset = 'utf8'
-    ) {
-        $this->connection = new mysqli($host, $username, $password, $dbname);
+
+    public function __construct() {
+        $this->connection = new mysqli($GLOBALS["hostname"], $GLOBALS["username"], $GLOBALS["password"], $GLOBALS["database"]);
         if ($this->connection->connect_error) {
             $this->error('Failed to connect to MySQL - ' . $this->connection->connect_error);
         }
-        $this->connection->set_charset($charset);
+        $this->connection->set_charset('utf8');
     }
 
     /**

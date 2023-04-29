@@ -2,7 +2,8 @@
 
 namespace App\Mappers;
 
-class ProductTypeVariantMapper extends Mapper {
+class ProductTypeVariantMapper extends Mapper
+{
 
     /**
      * @param $item
@@ -11,9 +12,10 @@ class ProductTypeVariantMapper extends Mapper {
     protected function item($item): array
     {
         return [
-            'id' => $item['variant_id'],
-            'name' => ucfirst($item['name']),
-            'unit' => $item['unit'],
+            'variant_id' => $item['variant_id'],
+            'variant_name' => ucfirst($item['name']),
+            'variant_alias' => $item['name'],
+            'variant_type' => 'text' // Default, can be optimized from db
         ];
     }
 }

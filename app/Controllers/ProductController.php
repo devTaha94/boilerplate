@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers;
+namespace app\Controllers;
 
-use App\Services\Factories\ProductFactory;
-use App\Services\Repository\Product;
-use App\Validators\ProductValidator;
-use App\Validators\DeleteProductValidator;
+use app\Services\Factories\ProductFactory;
+use app\Services\Repository\Product;
+use app\Validators\ProductValidator;
+use app\Validators\DeleteProductValidator;
 
 class ProductController extends Controller
 {

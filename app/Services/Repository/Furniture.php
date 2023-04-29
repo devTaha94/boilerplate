@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Repository;
+namespace app\Services\Repository;
 
 class Furniture extends Product
 {

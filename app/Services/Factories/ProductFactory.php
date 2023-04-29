@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Services\Factories;
+namespace app\Services\Factories;
 
-use App\Services\Repository\Book;
-use App\Services\Repository\Dvd;
-use App\Services\Repository\Furniture;
-use App\Services\Repository\Product;
+use app\Services\Repository\Book;
+use app\Services\Repository\Dvd;
+use app\Services\Repository\Furniture;
+use app\Services\Repository\Product;
 
 class ProductFactory
 {

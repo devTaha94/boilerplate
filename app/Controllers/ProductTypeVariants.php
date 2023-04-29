@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace app\Controllers;
 
-use App\Mappers\ProductTypeVariantMapper;
+use app\Mappers\ProductTypeVariantMapper;
 use DB;
 
 class ProductTypeVariants

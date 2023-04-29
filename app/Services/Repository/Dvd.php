@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Repository;
+namespace app\Services\Repository;
 
 class Dvd extends Product
 {

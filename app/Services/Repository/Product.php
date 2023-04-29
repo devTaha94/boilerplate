@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\Repository;
+namespace app\Services\Repository;
 
-use App\Services\Interfaces\ProductInterface;
+use app\Services\Interfaces\ProductInterface;
 use DB;
 
 abstract class Product implements ProductInterface

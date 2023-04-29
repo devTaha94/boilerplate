@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mappers;
+namespace app\Mappers;
 
 class ProductTypeMapper extends Mapper {
 
